@@ -14,10 +14,18 @@ class DF_EPOCView extends Ui.DataField
 	// 30/12/2018 - US = 0.10850 / DS = 0.1200
 	//
 
-	var UpSlopePercent = 0.10850;
+	// UpSlope
+	var UpSlopeThreshold = 0.70;
+
+	var UpSlopeOriginBelowThreshold = 0;
+	var UpSlopePercentBelowThreshold = 0.10850;
+
+	var UpSlopePercentAboveThreshold = 0.04859;
+	var UpSlopeOriginAboveThreshold = 4.34086;
 	
 	// DownSlope
 	var c = 1.12;
+	
 	//var DownSlopePercent = 0.1200;
 	//var DownSlopePerSec = 1 / Math.pow(c,1.0/60);
 	
@@ -266,10 +274,16 @@ class DF_EPOCView extends Ui.DataField
 				UpSlope = 0;
 			}
 			else
+			if (intensity < UpSlopeThreshold)
 			{
-				UpSlope = UpSlopePercent * intensity * 100 * time.toFloat() / 60;
-				System.println("UpSlope = " + UpSlope);
+				UpSlope = (UpSlopeOriginBelowThreshold + UpSlopePercentBelowThreshold * intensity * 100 * time.toFloat()) / 60;
 			}
+			else
+			{
+				UpSlope = (UpSlopeOriginAboveThreshold + UpSlopePercentAboveThreshold * intensity * 100 * time.toFloat()) / 60;
+			}
+
+			System.println("UpSlope - time = " + time + " - " + UpSlope);
 /*
 			if (intensity < 1)
 			{
@@ -289,11 +303,11 @@ class DF_EPOCView extends Ui.DataField
 			return (UpSlope);
 	   }
 
-	function EPOC_DownSlope(time)
+	function EPOC_DownSlopePercent(time)
 	{
-		var DownSlope = 1 / Math.pow(c,time.toFloat()/60);
-		System.println("DownSlope - time = " + time + " - " + DownSlope);
-		return (DownSlope);
+		var DownSlopePercent = - (1 - 1 / Math.pow(c,time.toFloat()/60));
+		System.println("DownSlopePercent - time = " + time + " - " + DownSlopePercent);
+		return (DownSlopePercent);
 	}
 /*
 	function EPOC_DownSlopePercent(intensity)
@@ -326,7 +340,7 @@ class DF_EPOCView extends Ui.DataField
 	   function y1(time, intensity, oldEPOC)
 	   {
 		   //var newEPOC = - EPOC_DownSlopePercent(intensity) * oldEPOC;
-		   var y1 = - (1 - EPOC_DownSlope(time)) * oldEPOC;
+		   var y1 = EPOC_DownSlopePercent(time) * oldEPOC;
 		   System.println("y1 = " + y1);
 		   return(y1);
 	   }	   
