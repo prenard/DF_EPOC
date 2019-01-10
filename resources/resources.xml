@@ -1,0 +1,14 @@
+<resources>
+    <fitContributions>
+        <fitField id="0"
+        displayInChart="true"
+        displayInActivityLaps="true"
+        displayInActivitySummary="true"
+        sortOrder="0"
+        precision="2"
+        chartTitle="@Strings.EPOC_label"
+        dataLabel="@Strings.EPOC_label"
+        unitLabel="@Strings.EPOC_unit"
+        fillColor="#FF0000" />
+    </fitContributions>
+</resources>

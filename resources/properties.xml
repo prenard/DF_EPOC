@@ -1,0 +1,20 @@
+<resources>
+	<properties>
+	    <property id="Use_Garmin_Training_Zones" type="boolean">true</property>
+	    <property id="Max_HR" type="number">180</property>
+	</properties>
+
+	<strings>
+    	<string id="Use_Garmin_Training_Zones_Title">Use Garmin Training Zones to determine Maximum Heart Rate</string>
+	    <string id="Max_HR_Title">Maximum Heart Rate</string>
+	</strings>
+	
+	<settings>
+	    <setting propertyKey="@Properties.Use_Garmin_Training_Zones" title="@Strings.Use_Garmin_Training_Zones_Title">
+	        <settingConfig type="boolean"/>
+	    </setting>
+	    <setting propertyKey="@Properties.Max_HR" title="@Strings.Max_HR_Title">
+	        <settingConfig type="numeric" min="0" max="250" />
+	    </setting>
+	</settings>
+</resources>

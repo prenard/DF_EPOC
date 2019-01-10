@@ -1,0 +1,7 @@
+<strings>
+    <string id="AppName">DF_EPOC</string>
+    <string id="EPOC_label">EPOC</string>
+    <string id="EPOC_unit">ml/kg</string>
+
+    <string id="label">My Value</string>
+</strings>

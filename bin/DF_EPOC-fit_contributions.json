@@ -1,0 +1,1 @@
+{"datafields":[{"id":0,"chart-visible":true,"activity-visible":true,"lap-visible":true,"chart-title-key":"EPOC_label","label-key":"EPOC_label","unit-label-key":"EPOC_unit","sort-order":0,"precision":2,"fill-color":"rgba(255, 0, 0, 1.0)"}],"strings":{"default":{"EPOC_label":"EPOC","EPOC_unit":"ml/kg"}}}
