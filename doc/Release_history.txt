@@ -21,6 +21,9 @@ This simple datafield uses these principles to compute a "speudo EPOC" value (wh
 
 EPOC values is recorded in FIT file and can be displayed in Garmin Connect for post analysis.
 
+This datafield needs some input parameters which can be entered using Garmin Connect:
+
+* Your maximum heart rate (which can be optionnaly obtained from Garmin training zones)
 
 Release History:
 
