@@ -2,6 +2,7 @@
     <iq:application entry="DF_EPOCApp" id="5439b99be586406db663a5ae3484670e" launcherIcon="@Drawables.LauncherIcon" name="@Strings.AppName" type="datafield" version="0.0.0">
         <iq:products>
             <iq:product id="edge1030"/>
+            <iq:product id="edge820"/>
             <iq:product id="fr935"/>
         </iq:products>
         <iq:permissions>

@@ -107,6 +107,38 @@ class DF_EPOCView extends Ui.DataField
 
 		switch (Device_Type)
 		{
+			case "edge_820":
+
+				DF_Title_x = 1;
+				DF_Title_y = 1;
+				DF_Title_font = Gfx.FONT_XTINY;
+
+				MaxHR_Title_x = 40;
+				MaxHR_Title_y = 1;
+				MaxHR_Title_font = Gfx.FONT_XTINY;
+
+				MaxHR_Value_x = 97;
+				MaxHR_Value_y = 1;
+				MaxHR_Value_font = Gfx.FONT_XTINY;
+ 
+				MaxEPOC_Title_x = 25;
+				MaxEPOC_Title_y = 9;
+				MaxEPOC_Title_font = Gfx.FONT_XTINY;
+
+				MaxEPOC_Value_x = 97;
+				MaxEPOC_Value_y = 9;
+				//MaxEPOC_Value_font = Gfx.FONT_NUMBER_MILD;
+				MaxEPOC_Value_font = Gfx.FONT_SMALL;
+				
+				EPOC_Value_x = 97;
+				EPOC_Value_y = 20;
+				//EPOC_Value_font = Gfx.FONT_NUMBER_THAI_HOT;
+				//EPOC_Value_font = Gfx.FONT_NUMBER_HOT;
+				//EPOC_Value_font = Gfx.FONT_NUMBER_MEDIUM;
+				EPOC_Value_font = Gfx.FONT_LARGE;
+
+				break;
+
 			case "edge_1030":
 
 				DF_Title_x = 1;
@@ -178,8 +210,13 @@ class DF_EPOCView extends Ui.DataField
     // the draw context is changed this will be called.
     function onLayout(dc)
     {
-    	System.println("DC Height  = " + dc.getHeight());
-      	System.println("DC Width  = " + dc.getWidth());
+
+		//
+		// To get screen size
+		//
+    	//System.println("DC Height  = " + dc.getHeight());
+      	//System.println("DC Width  = " + dc.getWidth());
+        
         View.setLayout(Rez.Layouts.MainLayout(dc));
         return true;
     }
