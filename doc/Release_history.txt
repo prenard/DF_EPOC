@@ -27,6 +27,12 @@ This datafield needs some input parameters which can be entered using Garmin Con
 
 Release History:
 
+- V1.04 - 2019-02-06
+* Update Edge 820 display
+- V1.03 - 2019-02-06
+* Update Edge 820 display
+- V1.02 - 2019-02-06
+* Update Edge 820 display
 - V1.01 - 2019-02-05
 * Add Edge 820 support
 - V1.00 - 2019-01-29

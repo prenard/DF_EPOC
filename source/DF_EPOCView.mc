@@ -110,15 +110,15 @@ class DF_EPOCView extends Ui.DataField
 			case "edge_820":
 
 				DF_Title_x = 1;
-				DF_Title_y = 1;
+				DF_Title_y = 0;
 				DF_Title_font = Gfx.FONT_XTINY;
 
 				MaxHR_Title_x = 40;
-				MaxHR_Title_y = 1;
+				MaxHR_Title_y = 0;
 				MaxHR_Title_font = Gfx.FONT_XTINY;
 
 				MaxHR_Value_x = 97;
-				MaxHR_Value_y = 1;
+				MaxHR_Value_y = 0;
 				MaxHR_Value_font = Gfx.FONT_XTINY;
  
 				MaxEPOC_Title_x = 25;
@@ -131,7 +131,7 @@ class DF_EPOCView extends Ui.DataField
 				MaxEPOC_Value_font = Gfx.FONT_SMALL;
 				
 				EPOC_Value_x = 97;
-				EPOC_Value_y = 20;
+				EPOC_Value_y = 24;
 				//EPOC_Value_font = Gfx.FONT_NUMBER_THAI_HOT;
 				//EPOC_Value_font = Gfx.FONT_NUMBER_HOT;
 				//EPOC_Value_font = Gfx.FONT_NUMBER_MEDIUM;
